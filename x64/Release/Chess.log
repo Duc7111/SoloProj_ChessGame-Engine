@@ -1,0 +1,45 @@
+﻿  Board.cpp
+  Drawing.cpp
+D:\MindGame\Chess\Drawing.cpp(20,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\MindGame\Chess\Drawing.cpp(20,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+  Source.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\memory(3423,35): error C2661: 'std::tuple<void (__cdecl Game::* )(sf::RenderWindow &),Game,sf::RenderWindow>::tuple': no overloaded function takes 3 arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(66): message : see reference to function template instantiation 'std::unique_ptr<_Tuple,std::default_delete<_Tuple>> std::make_unique<_Tuple,_Ty,Game&,sf::RenderWindow&,0>(_Ty &&,Game &,sf::RenderWindow &)' being compiled
+          with
+          [
+              _Ty=void (__cdecl Game::* )(sf::RenderWindow &)
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(89): message : see reference to function template instantiation 'void std::thread::_Start<_Ty,Game&,sf::RenderWindow&>(_Fn &&,Game &,sf::RenderWindow &)' being compiled
+          with
+          [
+              _Ty=void (__cdecl Game::* )(sf::RenderWindow &),
+              _Fn=void (__cdecl Game::* )(sf::RenderWindow &)
+          ]
+D:\MindGame\Chess\Source.cpp(20): message : see reference to function template instantiation 'std::thread::thread<void(__cdecl Game::* )(sf::RenderWindow &),Game&,sf::RenderWindow&,0>(_Fn &&,Game &,sf::RenderWindow &)' being compiled
+          with
+          [
+              _Fn=void (__cdecl Game::* )(sf::RenderWindow &)
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(55,14): error C2672: 'invoke': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(61): message : see reference to function template instantiation 'unsigned int std::thread::_Invoke<_Tuple,0,1,2>(void *) noexcept' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(66): message : see reference to function template instantiation 'unsigned int (__cdecl *std::thread::_Get_invoke<_Tuple,0,1,2>(std::integer_sequence<size_t,0,1,2>) noexcept)(void *)' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(51,5): error C2893: Failed to specialize function template 'unknown-type std::invoke(_Callable &&,_Ty1 &&,_Types2 &&...) noexcept(<expr>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\type_traits(1482): message : see declaration of 'std::invoke'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(51,5): message : With the following template arguments:
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(51,5): message : '_Callable=void (__cdecl Game::* )(sf::RenderWindow &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(51,5): message : '_Ty1=Game'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(51,5): message : '_Types2={sf::RenderWindow}'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\thread(51,5): error C2780: 'unknown-type std::invoke(_Callable &&) noexcept(<expr>)': expects 1 arguments - 3 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\type_traits(1476): message : see declaration of 'std::invoke'
+  Pieces.cpp
+D:\MindGame\Chess\Pieces.cpp(6,71): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\MindGame\Chess\Pieces.cpp(6,38): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
