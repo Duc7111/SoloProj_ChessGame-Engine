@@ -1,9 +1,7 @@
 #include "Board.h"
 #include "Const.h"
 
-Board::Square::Square() : pID(0)
-{
-}
+Board::Square::Square() : pID(0), moveAble(false) {}
 
 Board::Board(const std::string& dir, const sf::Color& color)
 {

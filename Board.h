@@ -15,6 +15,7 @@ public:
 	{
 	public:
 		char pID;
+		bool moveAble;
 		Square();
 	}square[8][8];
 

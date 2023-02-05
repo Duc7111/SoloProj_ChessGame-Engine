@@ -3,22 +3,31 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 
+#include "Board.h"
+
+enum signedBool { black = -1, white = 1 };
+
 class Piece
 {
 protected:
 	sf::Sprite sprite;
-	unsigned char x, y;
+	char x, y;
 	
 	void resetLocation();
 public:
-	const bool color;
+	const signedBool color;
 
 	Piece(unsigned char = 0); // bxxxyyyc
 
 	static void loadTexture(const std::string&);
 
+	virtual void preMove(Board&) = 0;
+	virtual void postMove(Board&) = 0;
+	
+	virtual bool isChecking(const char&, const char&) = 0;
+
 	void mouseMove(sf::RenderWindow&);
-	virtual void move(sf::RenderWindow&) = 0;
+	bool move(Board&);
 
 	void draw(sf::RenderWindow&);
 };
@@ -31,7 +40,10 @@ private:
 public:
 	King(unsigned char = 0);
 
-	void move(sf::RenderWindow&) override;
+	void preMove(Board&) override;
+	void postMove(Board&) override;
+
+	bool isChecking(const char&, const char&) override;
 
 	friend class Piece;
 };
@@ -44,7 +56,10 @@ private:
 public:
 	Queen(unsigned char = 0);
 
-	void move(sf::RenderWindow&) override;
+	void preMove(Board&) override;
+	void postMove(Board&) override;
+
+	bool isChecking(const char&, const char&) override;
 
 	friend class Piece;
 };
@@ -57,7 +72,10 @@ private:
 public:
 	Rook(unsigned char = 0);
 
-	void move(sf::RenderWindow&) override;
+	void preMove(Board&) override;
+	void postMove(Board&) override;
+
+	bool isChecking(const char&, const char&) override;
 
 	friend class Piece;
 	
@@ -71,7 +89,10 @@ private:
 public:
 	Bishop(unsigned char = 0);
 
-	void move(sf::RenderWindow&) override;
+	void preMove(Board&) override;
+	void postMove(Board&) override;
+
+	bool isChecking(const char&, const char&) override;
 
 	friend class Piece;
 };
@@ -84,7 +105,10 @@ private:
 public:
 	Knight(unsigned char = 0);
 
-	void move(sf::RenderWindow&) override;
+	void preMove(Board&) override;
+	void postMove(Board&) override;
+
+	bool isChecking(const char&, const char&) override;
 
 	friend class Piece;
 };
@@ -97,7 +121,10 @@ private:
 public:
 	Pawn(unsigned char = 0);
 
-	void move(sf::RenderWindow&) override;
+	void preMove(Board&) override;
+	void postMove(Board&) override;
+
+	bool isChecking(const char&, const char&) override;
 
 	friend class Piece;
 };
